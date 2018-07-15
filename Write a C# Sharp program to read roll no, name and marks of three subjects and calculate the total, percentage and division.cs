@@ -10,12 +10,18 @@ namespace Logic15
     {
         static void Main(string[] args)
         {
-            int rollno,physics,chemistry,computerApplication;
+            int rollno, physics, chemistry, computerApplication;
             string name;
+            Console.WriteLine("the student detail are: ");
+            Console.WriteLine("enter the name:");
+            name = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("enter the rollno: ");
             rollno = Convert.ToInt32(Console.ReadLine());
-            name = Console.ReadLine();
+            Console.WriteLine("enter marks of physics: ");
             physics = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the marks of chemistry:");
             chemistry = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the marks of computerApplication: ");
             computerApplication = Convert.ToInt32(Console.ReadLine());
             int total;
             float percentage;
@@ -29,7 +35,7 @@ namespace Logic15
             Console.WriteLine("The ComputerApplication={0}", computerApplication);
             Console.WriteLine("The total value={0}", total);
             Console.WriteLine("The Percentage={0}", percentage + "%");
-           
+
             if (percentage >= 80)
             {
                 Console.WriteLine("First Class");
@@ -38,9 +44,13 @@ namespace Logic15
             {
                 Console.WriteLine("Second Class");
             }
-            else
+            else if (percentage >= 45 && percentage < 65)
             {
                 Console.WriteLine("Third Class");
+            }
+            else
+            {
+                Console.WriteLine("Fail");
             }
             Console.ReadLine();
         }
